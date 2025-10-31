@@ -153,8 +153,8 @@ npm start
 | Página | Preview |
 |--------|----------|
 | **Home / História** | ![Home Desktop](public/demonstracao/desktop/home-historia.png) |
-| **Serviços** | ![Serviços Desktop](public/demonstracao/desktop/Servicos.png) |
-| **Por que escolher** | ![Por que Desktop](public/demonstracao/desktop/Por-que.png) |
+| **Serviços** | ![Serviços Desktop](public/demonstracao/desktop/servicos.png) |
+| **Por que escolher** | ![Por que Desktop](public/demonstracao/desktop/por-que.png) |
 | **Chamada / Final CTA** | ![Chamada Desktop](public/demonstracao/desktop/final.png) |
 | **FAQ** | ![FAQ Desktop](public/demonstracao/desktop/faq.png) |
 | **Depoimentos** | ![Depoimentos Desktop](public/demonstracao/desktop/depoimentos.png) |
