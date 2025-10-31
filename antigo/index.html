@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Antecipe seu FGTS com a Sam_Creds - soluções financeiras rápidas, seguras e 100% online." />
+    <meta name="author" content="Sam_Creds" />
+    <meta name="robots" content="index, follow" />
+    <title>Sam_Creds - Soluções Financeiras</title>
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script>
+
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        royal: '#1e3a8a', // azul royal
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .animate-scroll {
+            animation: scroll 30s linear infinite;
+            display: flex;
+            width: max-content;
+        }
+
+        /* Pausa quando o mouse entra na faixa de imagens */
+        #slider:hover {
+            animation-play-state: paused;
+        }
+
+        .carousel::-webkit-scrollbar {
+            display: none;
+        }
+
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        .memory-card:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-front,
+        .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 1rem;
+            overflow: hidden;
+        }
+
+        .card-back {
+            transform: rotateY(180deg);
+        }
+
+        @keyframes flashPulse {
+            0%, 100% {
+            box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.6); /* verde-500 */
+            background-color: #22c55e; /* verde-500 */
+            }
+            50% {
+            box-shadow: 0 0 20px 10px rgba(34, 197, 94, 0.7);
+            background-color: #16a34a; /* verde-600 */
+            }
+        }
+
+        .whatsapp-flash-button {
+            background-color: #22c55e;
+            animation: flashPulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes pulse-strong {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.6);
+            }
+            50% {
+                box-shadow: 0 0 0 15px rgba(34, 197, 94, 0);
+            }
+        }
+        .btn-glow {
+        animation: pulse-strong 2s infinite;
+        }
+    </style>
+
+</head>
+
+<body class="bg-blue-900 text-white">
+
+    <!-- Header Moderno com Tooltips e Pulse -->
+    <header class="bg-blue-900 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+
+                <!-- Logo -->
+                <div class="flex flex-col items-center md:items-start leading-tight text-center md:text-left">
+                    <h1 class="text-xl md:text-2xl font-bold tracking-tight">
+                        <span class="text-white">SAM</span><span class="text-transparent">_</span><span
+                            class="text-yellow-400">CREDS</span>
+                    </h1>
+                    <span class="text-white text-xs tracking-wide opacity-70">Soluções Financeiras</span>
+                </div>
+
+                <!-- Menu desktop -->
+                <nav class="hidden md:flex space-x-8 text-white font-medium">
+                    <a href="#servicos" class="hover:text-yellow-400 transition">Serviços</a>
+                    <a href="#beneficios" class="hover:text-yellow-400 transition">Benefícios</a>
+                    <a href="#depoimentos" class="hover:text-yellow-400 transition">Depoimentos</a>
+                    <a href="#faq" class="hover:text-yellow-400 transition">FAQ</a>
+                </nav>
+
+                <!-- Botões com ícones -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/5571982333570?text=Oi%2C+quero+antecipar+meu+FGTS+com+a+Sam_Creds%21+Como+funciona%3F" target="_blank"
+                        class="relative group bg-green-500 hover:bg-green-600 p-2 rounded-full transition animate-pulse hover:scale-110">
+                        <span
+                            class="absolute top-10 left-1/2 -translate-x-1/2 bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">
+                            WhatsApp
+                        </span>
+                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M20.52 3.48A11.91 11.91 0 0 0 12 0C5.4 0 0 5.4 0 12a11.9 11.9 0 0 0 1.66 6.05L0 24l6.24-1.64A11.9 11.9 0 0 0 12 24c6.6 0 12-5.4 12-12 0-3.18-1.24-6.18-3.48-8.52zM12 21.84a9.81 9.81 0 0 1-5.1-1.38l-.36-.22-3.69.97.98-3.6-.23-.37a9.75 9.75 0 1 1 8.4 4.6zm5.51-7.39c-.3-.15-1.8-.89-2.08-.99-.28-.1-.48-.15-.68.15-.2.3-.78.99-.96 1.19-.18.2-.35.22-.65.07-.3-.15-1.26-.47-2.4-1.5a8.99 8.99 0 0 1-1.66-2.07c-.18-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.68-1.63-.94-2.23-.25-.6-.5-.52-.68-.53h-.57c-.2 0-.52.07-.8.37-.28.3-1.07 1.04-1.07 2.54s1.1 2.96 1.25 3.16c.15.2 2.2 3.36 5.33 4.7.75.33 1.34.53 1.8.67.76.24 1.45.2 2 .12.61-.09 1.87-.76 2.13-1.5.26-.75.26-1.38.18-1.5-.08-.11-.28-.18-.58-.33z" />
+                        </svg>
+                    </a>
+
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/dc.samuellopes" target="_blank"
+                        class="relative group bg-gradient-to-tr from-yellow-400 to-pink-500 p-2 rounded-full transition animate-pulse hover:scale-110">
+                        <span
+                            class="absolute top-10 left-1/2 -translate-x-1/2 bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">
+                            Instagram
+                        </span>
+                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M7.75 2A5.75 5.75 0 0 0 2 7.75v8.5A5.75 5.75 0 0 0 7.75 22h8.5A5.75 5.75 0 0 0 22 16.25v-8.5A5.75 5.75 0 0 0 16.25 2h-8.5zM4 7.75A3.75 3.75 0 0 1 7.75 4h8.5A3.75 3.75 0 0 1 20 7.75v8.5A3.75 3.75 0 0 1 16.25 20h-8.5A3.75 3.75 0 0 1 4 16.25v-8.5zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm5.25-2a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5z" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Menu mobile -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-white focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dropdown Mobile -->
+        <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2 bg-blue-800 text-white">
+            <a href="#servicos" class="block py-2 border-b border-blue-700">Serviços</a>
+            <a href="#beneficios" class="block py-2 border-b border-blue-700">Benefícios</a>
+            <a href="#depoimentos" class="block py-2 border-b border-blue-700">Depoimentos</a>
+            <a href="#faq" class="block py-2 border-b border-blue-700">FAQ</a>
+            <div class="flex gap-4 pt-2">
+                <!-- WhatsApp -->
+                <a href="https://wa.me/5571982333570?text=Oi%2C+quero+antecipar+meu+FGTS+com+a+Sam_Creds%21+Como+funciona%3F" target="_blank"
+                    class="bg-green-500 hover:bg-green-600 p-2 rounded-full transition">
+                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M20.52 3.48A11.91 11.91 0 0 0 12 0C5.4 0 0 5.4 0 12a11.9 11.9 0 0 0 1.66 6.05L0 24l6.24-1.64A11.9 11.9 0 0 0 12 24c6.6 0 12-5.4 12-12 0-3.18-1.24-6.18-3.48-8.52zM12 21.84a9.81 9.81 0 0 1-5.1-1.38l-.36-.22-3.69.97.98-3.6-.23-.37a9.75 9.75 0 1 1 8.4 4.6zm5.51-7.39c-.3-.15-1.8-.89-2.08-.99-.28-.1-.48-.15-.68.15-.2.3-.78.99-.96 1.19-.18.2-.35.22-.65.07-.3-.15-1.26-.47-2.4-1.5a8.99 8.99 0 0 1-1.66-2.07c-.18-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.68-1.63-.94-2.23-.25-.6-.5-.52-.68-.53h-.57c-.2 0-.52.07-.8.37-.28.3-1.07 1.04-1.07 2.54s1.1 2.96 1.25 3.16c.15.2 2.2 3.36 5.33 4.7.75.33 1.34.53 1.8.67.76.24 1.45.2 2 .12.61-.09 1.87-.76 2.13-1.5.26-.75.26-1.38.18-1.5-.08-.11-.28-.18-.58-.33z" /> </svg>
+                </a>
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/dc.samuellopes" target="_blank"
+                    class="bg-gradient-to-tr from-yellow-400 to-pink-500 p-2 rounded-full transition">
+                        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M7.75 2A5.75 5.75 0 0 0 2 7.75v8.5A5.75 5.75 0 0 0 7.75 22h8.5A5.75 5.75 0 0 0 22 16.25v-8.5A5.75 5.75 0 0 0 16.25 2h-8.5zM4 7.75A3.75 3.75 0 0 1 7.75 4h8.5A3.75 3.75 0 0 1 20 7.75v8.5A3.75 3.75 0 0 1 16.25 20h-8.5A3.75 3.75 0 0 1 4 16.25v-8.5zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm5.25-2a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5z" /> </svg>
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <main class="max-w-7xl mx-auto px-6 py-10">
+        <section class="py-12 px-6 bg-blue-900" id="hero">
+            <div class="max-w-7xl mx-auto flex flex-col md:grid md:grid-cols-2 items-center gap-8">
+        
+                <!-- Título no mobile -->
+                <div class="block md:hidden text-center" data-aos="fade-down" data-aos-duration="1000">
+                    <h2 class="text-2xl font-bold text-white leading-tight">
+                        ANTECIPA SEU FGTS
+                    </h2>
+                    <p class="text-yellow-400 text-xl font-bold mt-1">
+                        e conquiste seus objetivos<br />
+                        com segurança e rapidez!
+                    </p>
+                </div>
+        
+                <!-- Imagem -->
+                <div class="flex justify-center" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="assets/Samuel.png" alt="Consultor Sam_Creds"
+                        class="w-[300px] sm:w-[400px] md:w-[480px] lg:w-[500px] object-contain drop-shadow-xl rounded-xl transition duration-500 hover:scale-105" />
+                </div>
+        
+                <!-- Texto + botão -->
+                <div class="text-center md:text-left" data-aos="fade-up" data-aos-delay="400">
+                    <div class="hidden md:block">
+                        <h2 class="text-3xl md:text-4xl font-bold text-white leading-tight">
+                            ANTECIPA SEU FGTS
+                        </h2>
+                        <p class="text-yellow-400 text-2xl md:text-3xl font-bold mt-2">
+                            e conquiste seus objetivos<br />
+                            com segurança e rapidez!
+                        </p>
+                    </div>
+                    <p class="text-white/90 my-6 text-lg">
+                        Atendimento 100% online, sem burocracia e com aprovação rápida.
+                    </p>
+                    <a href="https://wa.me/5571982333570?text=Oi%2C+quero+antecipar+meu+FGTS+com+a+Sam_Creds%21+Como+funciona%3F" target="_blank"
+                        class="inline-flex items-center gap-2 px-6 py-3 text-lg font-semibold text-white bg-green-500 rounded-full shadow-lg animate-pulse hover:bg-green-600 transition duration-300">
+                        💬 Simule agora no WhatsApp
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Seção de Serviços -->
+        <section id="servicos" class="py-12 px-6 bg-blue-900">
+            <div class="max-w-7xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-10">Nossos Serviços</h2>
+        
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        
+                    <!-- Serviço 1 -->
+                    <a href="https://wa.me/5571982333570?text=Oi%2C+quero+antecipar+meu+FGTS+com+a+Sam_Creds.+Pode+me+explicar+como+funciona%3F"
+                        target="_blank"
+                        class="block bg-white/10 backdrop-blur-md p-6 rounded-xl shadow hover:scale-105 transition transform">
+                        <div class="text-4xl mb-4">💰</div>
+                        <h3 class="text-xl font-semibold">Antecipação de FGTS</h3>
+                    </a>
+        
+                    <!-- Serviço 2 -->
+                    <a href="https://wa.me/5571982333570?text=Oi%2C+tenho+direito+ao+Bolsa+Fam%C3%ADlia+e+gostaria+de+saber+como+fazer+o+empr%C3%A9stimo+com+a+Sam_Creds."
+                        target="_blank"
+                        class="block bg-white/10 backdrop-blur-md p-6 rounded-xl shadow hover:scale-105 transition transform">
+                        <div class="text-4xl mb-4">👨‍👩‍👧</div>
+                        <h3 class="text-xl font-semibold">Empréstimo Bolsa Família</h3>
+                    </a>
+        
+                    <!-- Serviço 3 -->
+                    <a href="https://wa.me/5571982333570?text=Ol%C3%A1%2C+trabalho+com+carteira+assinada+e+quero+fazer+um+empr%C3%A9stimo+CLT.+Pode+me+ajudar%3F"
+                        target="_blank"
+                        class="block bg-white/10 backdrop-blur-md p-6 rounded-xl shadow hover:scale-105 transition transform">
+                        <div class="text-4xl mb-4">💼</div>
+                        <h3 class="text-xl font-semibold">Empréstimo CLT</h3>
+                    </a>
+        
+                    <!-- Serviço 4 -->
+                    <a href="https://wa.me/5571982333570?text=Oi%2C+tenho+conta+de+energia+em+meu+nome+e+quero+saber+como+funciona+o+empr%C3%A9stimo+com+a+Sam_Creds."
+                        target="_blank"
+                        class="block bg-white/10 backdrop-blur-md p-6 rounded-xl shadow hover:scale-105 transition transform">
+                        <div class="text-4xl mb-4">⚡</div>
+                        <h3 class="text-xl font-semibold">Na conta de energia</h3>
+                    </a>
+        
+                    <!-- Serviço 5 -->
+                    <a href="https://wa.me/5571982333570?text=Ol%C3%A1%2C+gostaria+de+saber+como+voc%C3%AAs+podem+me+ajudar+a+limpar+meu+nome+com+a+Sam_Creds."
+                        target="_blank"
+                        class="block bg-white/10 backdrop-blur-md p-6 rounded-xl shadow hover:scale-105 transition transform">
+                        <div class="text-4xl mb-4">✅</div>
+                        <h3 class="text-xl font-semibold">Limpa Nome</h3>
+                    </a>
+        
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Benefícios -->
+        <section id="beneficios" class="py-16 px-6 bg-blue-900">
+            <div class="max-w-7xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-10">Por que escolher a Sam_Creds?</h2>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+
+                    <!-- Benefício 1 -->
+                    <div class="bg-white/10 p-6 rounded-lg shadow-md">
+                        <div class="text-4xl mb-4">🌐</div>
+                        <h3 class="text-xl font-semibold mb-2">Atendimento Online</h3>
+                        <p class="text-white/80 text-sm">Fale com a gente sem sair de casa, pelo WhatsApp.</p>
+                    </div>
+
+                    <!-- Benefício 2 -->
+                    <div class="bg-white/10 p-6 rounded-lg shadow-md">
+                        <div class="text-4xl mb-4">⚡</div>
+                        <h3 class="text-xl font-semibold mb-2">Aprovação Rápida</h3>
+                        <p class="text-white/80 text-sm">Análise e resposta em poucas horas.</p>
+                    </div>
+
+                    <!-- Benefício 3 -->
+                    <div class="bg-white/10 p-6 rounded-lg shadow-md">
+                        <div class="text-4xl mb-4">📄</div>
+                        <h3 class="text-xl font-semibold mb-2">Sem Burocracia</h3>
+                        <p class="text-white/80 text-sm">Processo simples e direto ao ponto.</p>
+                    </div>
+
+                    <!-- Benefício 4 -->
+                    <div class="bg-white/10 p-6 rounded-lg shadow-md">
+                        <div class="text-4xl mb-4">🔒</div>
+                        <h3 class="text-xl font-semibold mb-2">Segurança e Confiança</h3>
+                        <p class="text-white/80 text-sm">Tratamos seus dados com responsabilidade.</p>
+                    </div>
+
+                    <!-- Benefício 5 -->
+                    <div class="bg-white/10 p-6 rounded-lg shadow-md">
+                        <div class="text-4xl mb-4">❤️</div>
+                        <h3 class="text-xl font-semibold mb-2">Suporte Humanizado</h3>
+                        <p class="text-white/80 text-sm">Atendimento de verdade, feito por pessoas.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Seção de Depoimentos -->
+        <section id="depoimentos" class="py-16 px-6 bg-blue-900 overflow-hidden">
+            <div class="max-w-7xl mx-auto text-center mb-10">
+                <h2 class="text-3xl font-bold">O que dizem nossos clientes</h2>
+        </div>
+
+            <!-- Faixa deslizante com imagens -->
+            <div id="slider" class="flex gap-6 animate-scroll overflow-hidden py-4 px-2 scrollbar-hide snap-x snap-mandatory">
+            
+                <!-- Depoimento 1 -->
+                <div class="min-w-[250px] sm:min-w-[280px] bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition transform">
+                    <img src="assets/1.jpeg" alt="Depoimento 1" class="h-[400px] w-auto object-cover rounded-xl shadow-lg snap-center transition transform" />
+                </div>
+            
+                <!-- Depoimento 2 -->
+                <div class="min-w-[250px] sm:min-w-[280px] bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition transform">
+                    <img src="assets/2.jpeg" alt="Depoimento 2" class="h-[400px] w-auto object-cover rounded-xl shadow-lg snap-center transition transform" />
+                </div>
+            
+                <!-- Depoimento 3 -->
+                <div class="min-w-[250px] sm:min-w-[280px] bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition transform">
+                    <img src="assets/3.jpeg" alt="Depoimento 3" class="h-[400px] w-auto object-cover rounded-xl shadow-lg snap-center transition transform" />
+                </div>
+            
+                <!-- Depoimento 4 -->
+                <div class="min-w-[250px] sm:min-w-[280px] bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition transform">
+                    <img src="assets/4.jpeg" alt="Depoimento 4" class="h-[400px] w-auto object-cover rounded-xl shadow-lg snap-center transition transform" />
+                </div>
+            
+                <!-- Depoimento 5 -->
+                <div class="min-w-[250px] sm:min-w-[280px] bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition transform">
+                    <img src="assets/5.jpeg" alt="Depoimento 5" class="h-[400px] w-auto object-cover rounded-xl shadow-lg snap-center transition transform" />
+                </div>
+            
+                <!-- Depoimento 6 -->
+                <div class="min-w-[250px] sm:min-w-[280px] bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition transform">
+                    <img src="assets/6.jpeg" alt="Depoimento 6" class="h-[400px] w-auto object-cover rounded-xl shadow-lg snap-center transition transform" />
+                </div>
+
+                <!-- Depoimento 1 -->
+                <div
+                    class="min-w-[250px] sm:min-w-[280px] bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition transform">
+                    <img src="assets/1.jpeg" alt="Depoimento 1"
+                        class="h-[400px] w-auto object-cover rounded-xl shadow-lg snap-center transition transform" />
+                </div>
+                
+                <!-- Depoimento 2 -->
+                <div
+                    class="min-w-[250px] sm:min-w-[280px] bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition transform">
+                    <img src="assets/2.jpeg" alt="Depoimento 2"
+                        class="h-[400px] w-auto object-cover rounded-xl shadow-lg snap-center transition transform" />
+                </div>
+                
+                <!-- Depoimento 3 -->
+                <div
+                    class="min-w-[250px] sm:min-w-[280px] bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition transform">
+                    <img src="assets/3.jpeg" alt="Depoimento 3"
+                        class="h-[400px] w-auto object-cover rounded-xl shadow-lg snap-center transition transform" />
+                </div>
+                
+                <!-- Depoimento 4 -->
+                <div
+                    class="min-w-[250px] sm:min-w-[280px] bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition transform">
+                    <img src="assets/4.jpeg" alt="Depoimento 4"
+                        class="h-[400px] w-auto object-cover rounded-xl shadow-lg snap-center transition transform" />
+                </div>
+                
+                <!-- Depoimento 5 -->
+                <div
+                    class="min-w-[250px] sm:min-w-[280px] bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition transform">
+                    <img src="assets/5.jpeg" alt="Depoimento 5"
+                        class="h-[400px] w-auto object-cover rounded-xl shadow-lg snap-center transition transform" />
+                </div>
+                
+                <!-- Depoimento 6 -->
+                <div
+                    class="min-w-[250px] sm:min-w-[280px] bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition transform">
+                    <img src="assets/6.jpeg" alt="Depoimento 6"
+                        class="h-[400px] w-auto object-cover rounded-xl shadow-lg snap-center transition transform" />
+                </div>
+            
+        </div>
+        </section>
+
+        <!-- Seção de Perguntas Frequentes (FAQ) -->
+        <section id="faq" class="py-20 px-6 bg-blue-900 text-white">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Perguntas Frequentes</h2>
+        
+            <div class="space-y-4">
+
+                <!-- FAQ 1 -->
+                <div class="bg-blue-800 rounded-xl shadow-lg transition">
+                    <button onclick="toggleFAQ(this)"
+                        class="w-full flex items-center justify-between px-6 py-5 font-medium text-left text-white hover:bg-blue-700 transition">
+                        <span>Em quanto tempo o FGTS cai na conta?</span>
+                        <svg class="w-5 h-5 text-yellow-400 transition-transform duration-300 transform" fill="none"
+                            stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 text-white/90 text-sm">
+                        O valor é creditado em até 10 minutos após a liberação.
+                    </div>
+                </div>
+                
+                <!-- FAQ 2 -->
+                <div class="bg-blue-800 rounded-xl shadow-lg transition">
+                    <button onclick="toggleFAQ(this)"
+                        class="w-full flex items-center justify-between px-6 py-5 font-medium text-left text-white hover:bg-blue-700 transition">
+                        <span>Em quanto tempo cai o Empréstimo Bolsa Família?</span>
+                        <svg class="w-5 h-5 text-yellow-400 transition-transform duration-300 transform" fill="none"
+                            stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 text-white/90 text-sm">
+                        O valor é depositado em até 24 horas.
+                    </div>
+                </div>
+                
+                <!-- FAQ 3 -->
+                <div class="bg-blue-800 rounded-xl shadow-lg transition">
+                    <button onclick="toggleFAQ(this)"
+                        class="w-full flex items-center justify-between px-6 py-5 font-medium text-left text-white hover:bg-blue-700 transition">
+                        <span>O que preciso fazer para antecipar o FGTS?</span>
+                        <svg class="w-5 h-5 text-yellow-400 transition-transform duration-300 transform" fill="none"
+                            stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 text-white/90 text-sm">
+                        Basta liberar o banco BMP e enviar o seu CPF para análise.
+                    </div>
+                </div>
+                
+                <!-- FAQ 4 -->
+                <div class="bg-blue-800 rounded-xl shadow-lg transition">
+                    <button onclick="toggleFAQ(this)"
+                        class="w-full flex items-center justify-between px-6 py-5 font-medium text-left text-white hover:bg-blue-700 transition">
+                        <span>Quais os requisitos para fazer o Empréstimo Bolsa Família?</span>
+                        <svg class="w-5 h-5 text-yellow-400 transition-transform duration-300 transform" fill="none"
+                            stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 text-white/90 text-sm">
+                        <ul class="list-disc pl-6 space-y-1">
+                            <li>Receber o benefício a partir de R$ 400,00</li>
+                            <li>Receber pelo aplicativo Caixa Tem</li>
+                            <li>Possuir documentos com foto</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- FAQ 5 -->
+                <div class="bg-blue-800 rounded-xl shadow-lg transition">
+                    <button onclick="toggleFAQ(this)"
+                        class="w-full flex items-center justify-between px-6 py-5 font-medium text-left text-white hover:bg-blue-700 transition">
+                        <span>Quais os requisitos para o Empréstimo CLT?</span>
+                        <svg class="w-5 h-5 text-yellow-400 transition-transform duration-300 transform" fill="none"
+                            stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 text-white/90 text-sm">
+                        É necessário ter, no mínimo, 1 ano de carteira assinada.
+                    </div>
+                </div>
+                
+                <!-- FAQ 6 -->
+                <div class="bg-blue-800 rounded-xl shadow-lg transition">
+                    <button onclick="toggleFAQ(this)"
+                        class="w-full flex items-center justify-between px-6 py-5 font-medium text-left text-white hover:bg-blue-700 transition">
+                        <span>O que é necessário para fazer o Empréstimo na Conta de Energia?</span>
+                        <svg class="w-5 h-5 text-yellow-400 transition-transform duration-300 transform" fill="none"
+                            stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 text-white/90 text-sm">
+                        <ul class="list-disc pl-6 space-y-1">
+                            <li>Ter consumo mínimo de R$ 60,00 na conta de energia</li>
+                            <li>Não ter mais de um boleto em aberto</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- FAQ 7 -->
+                <div class="bg-blue-800 rounded-xl shadow-lg transition">
+                    <button onclick="toggleFAQ(this)"
+                        class="w-full flex items-center justify-between px-6 py-5 font-medium text-left text-white hover:bg-blue-700 transition">
+                        <span>Vocês atendem fora de Salvador?</span>
+                        <svg class="w-5 h-5 text-yellow-400 transition-transform duration-300 transform" fill="none"
+                            stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 text-white/90 text-sm">
+                        Sim! Nosso atendimento é 100% online e disponível para todo o Brasil.
+                    </div>
+                </div>
+                
+                <!-- FAQ 8 -->
+                <div class="bg-blue-800 rounded-xl shadow-lg transition">
+                    <button onclick="toggleFAQ(this)"
+                        class="w-full flex items-center justify-between px-6 py-5 font-medium text-left text-white hover:bg-blue-700 transition">
+                        <span>É tudo feito online?</span>
+                        <svg class="w-5 h-5 text-yellow-400 transition-transform duration-300 transform" fill="none"
+                            stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 text-white/90 text-sm">
+                        Sim! O processo é totalmente digital, rápido e seguro, realizado pelo WhatsApp.
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-blue-950 text-white py-8 px-6 mt-16">
+        <div class="max-w-7xl mx-auto text-center text-sm space-y-2">
+            <p>© 2025 Sam_Creds - Soluções Financeiras</p>
+            <p>Atendimento 100% Online • Salvador - BA</p>
+            <p><a href="https://wa.me/5571982333570?text=Oi%2C+quero+antecipar+meu+FGTS+com+a+Sam_Creds%21+Como+funciona%3F" target="_blank"
+                    class="text-yellow-400 hover:underline">Fale conosco via WhatsApp</a></p>
+        </div>
+    </footer>
+
+    <!-- Botão WhatsApp fixo -->
+    <a href="https://wa.me/5571982333570?text=Oi%2C+quero+antecipar+meu+FGTS+com+a+Sam_Creds%21+Como+funciona%3F" target="_blank"
+        class="fixed bottom-5 right-5 z-50 bg-green-500 hover:bg-green-600 text-white px-5 py-3 rounded-full shadow-lg flex items-center gap-2 text-sm md:text-base transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-white" viewBox="0 0 24 24">
+            <path
+                d="M20.52 3.48A11.91 11.91 0 0 0 12 0C5.4 0 0 5.4 0 12a11.9 11.9 0 0 0 1.66 6.05L0 24l6.24-1.64A11.9 11.9 0 0 0 12 24c6.6 0 12-5.4 12-12 0-3.18-1.24-6.18-3.48-8.52zM12 21.84a9.81 9.81 0 0 1-5.1-1.38l-.36-.22-3.69.97.98-3.6-.23-.37a9.75 9.75 0 1 1 8.4 4.6zm5.51-7.39c-.3-.15-1.8-.89-2.08-.99-.28-.1-.48-.15-.68.15-.2.3-.78.99-.96 1.19-.18.2-.35.22-.65.07-.3-.15-1.26-.47-2.4-1.5a8.99 8.99 0 0 1-1.66-2.07c-.18-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.68-1.63-.94-2.23-.25-.6-.5-.52-.68-.53h-.57c-.2 0-.52.07-.8.37-.28.3-1.07 1.04-1.07 2.54s1.1 2.96 1.25 3.16c.15.2 2.2 3.36 5.33 4.7.75.33 1.34.53 1.8.67.76.24 1.45.2 2 .12.61-.09 1.87-.76 2.13-1.5.26-.75.26-1.38.18-1.5-.08-.11-.28-.18-.58-.33z" />
+        </svg>
+        WhatsApp
+    </a>
+
+    <script>
+        function toggleFAQ(button) {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('svg');
+
+                // Fecha todos
+                document.querySelectorAll('.faq-content').forEach(el => {
+                    if (el !== content) el.classList.add('hidden');
+                });
+                document.querySelectorAll('button svg').forEach(svg => {
+                    if (svg !== icon) svg.classList.remove('rotate-180');
+                });
+
+                // Alterna o atual
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            }
+
+        
+        const slider = document.getElementById("slider");
+        const images = slider.querySelectorAll("img");
+
+            images.forEach(img => {
+                img.addEventListener("mouseenter", () => {
+                    slider.style.animationPlayState = "paused";
+                });
+                img.addEventListener("mouseleave", () => {
+                    slider.style.animationPlayState = "running";
+                });
+            });
+
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+            menuBtn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

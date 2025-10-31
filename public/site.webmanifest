@@ -1,0 +1,21 @@
+{
+  "name": "Sam_Creds — Soluções Financeiras",
+  "short_name": "Sam_Creds",
+  "description": "Crédito responsável, análise rápida e atendimento humano.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0b1733",
+  "theme_color": "#0b1733",
+  "lang": "pt-BR",
+  "icons": [
+    { "src": "/icon.png", "sizes": "512x512", "type": "image/png" },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    { "src": "/favicon.ico", "sizes": "48x48", "type": "image/x-icon" }
+  ]
+}

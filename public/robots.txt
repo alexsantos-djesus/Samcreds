@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://samcreds.debuguei.com.br/sitemap.xml
