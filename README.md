@@ -16,50 +16,73 @@ O projeto foi desenvolvido como uma **landing moderna e interativa**, com foco t
 
 ## 🧩 Estrutura do Projeto
 
-📦 samcreds
- ┣ 📂 app
- ┃ ┣ layout.tsx
- ┃ ┣ page.tsx
- ┃ ┣ sitemap.ts
- ┃ ┣ robots.ts
- ┃ ┗ globals.css
- ┣ 📂 components
- ┃ ┣ 📂 sections
- ┃ ┃ ┣ Intro.tsx
- ┃ ┃ ┣ StoryScroll.tsx
- ┃ ┃ ┣ HeroSamuel.tsx
- ┃ ┃ ┣ Services.tsx
- ┃ ┃ ┣ WhyUs.tsx
- ┃ ┃ ┣ Testimonials.tsx
- ┃ ┃ ┣ FAQ.tsx
- ┃ ┃ ┣ FinalCTA.tsx
- ┃ ┃ ┣ Footer.tsx
- ┃ ┃ ┣ FloatingNav.tsx
- ┃ ┃ ┣ WhatsAppFab.tsx
- ┃ ┃ ┗ GoHomeFab.tsx
- ┃ ┣ 📂 ui
- ┃ ┃ ┣ button.tsx
- ┃ ┃ ┣ card.tsx
- ┃ ┃ ┣ accordion.tsx
- ┃ ┃ ┗ popover.tsx
- ┃ ┗ ScrollReset.tsx
- ┣ 📂 lib
- ┃ ┣ gsapClient.ts
- ┃ ┣ utils.ts
- ┃ ┗ usePrefersReducedMotion.ts
- ┣ 📂 public
- ┃ ┣ 📂 assets
- ┃ ┃ ┣ logo.png
- ┃ ┃ ┣ favicon.ico
- ┃ ┃ ┣ Samuel.png
- ┃ ┃ ┣ og.jpg
- ┃ ┃ ┣ site.webmanifest
- ┃ ┃ ┣ robots.txt
- ┃ ┃ ┗ sitemap.xml
- ┣ .gitignore
- ┣ package.json
- ┣ README.md
- ┗ tailwind.config.js
+samcreds/
+├── app/
+│   ├── globals.css
+│   ├── layout.tsx
+│   ├── page.tsx
+│   ├── robots.ts
+│   └── sitemap.ts
+│
+├── components/
+│   ├── sections/
+│   │   ├── ChamadaToServicosWipe.tsx
+│   │   ├── FAQ.tsx
+│   │   ├── FinalCTA.tsx
+│   │   ├── FloatingNav.tsx
+│   │   ├── Footer.tsx
+│   │   ├── GoHomeFab.tsx
+│   │   ├── HeroSamuel.tsx
+│   │   ├── Intro.tsx
+│   │   ├── Services.tsx
+│   │   ├── StoryScroll.tsx
+│   │   ├── Testimonials.tsx
+│   │   ├── WhatsAppFab.tsx
+│   │   └── WhyUs.tsx
+│   │
+│   ├── ui/
+│   │   ├── accordion.tsx
+│   │   ├── BrandIcons.tsx
+│   │   ├── button.tsx
+│   │   ├── card.tsx
+│   │   ├── popover.tsx
+│   │   ├── ScrollReset.tsx
+│   │   └── sheet.tsx
+│
+├── lib/
+│   ├── gsapClient.ts
+│   ├── usePrefersReducedMotion.ts
+│   └── utils.ts
+│
+├── public/
+│   ├── assets/
+│   │   ├── 1.jpeg
+│   │   ├── 2.jpeg
+│   │   ├── 3.jpeg
+│   │   ├── 4.jpeg
+│   │   ├── 5.jpeg
+│   │   ├── 6.jpeg
+│   │   ├── logo.png
+│   │   ├── preview.png
+│   │   ├── Samuel.png
+│   │   ├── apple-touch-icon.png
+│   │   ├── favicon.ico
+│   │   ├── icon.png
+│   │   ├── og.jpg
+│   │   ├── robots.txt
+│   │   ├── site.webmanifest
+│   │   └── sitemap.xml
+│
+├── .gitignore
+├── next-env.d.ts
+├── next.config.mjs
+├── next-sitemap.config.js
+├── package.json
+├── package-lock.json
+├── postcss.config.js
+├── tailwind.config.js
+├── tsconfig.json
+└── README.md
 
 ---
 
