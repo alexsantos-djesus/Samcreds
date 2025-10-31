@@ -152,24 +152,24 @@ npm start
 ### 💻 Versão Desktop
 | Página | Preview |
 |--------|----------|
-| **Home / História** | ![Home Desktop](public/assets/demonstracao/desktop/home-historia.png) |
-| **Serviços** | ![Serviços Desktop](public/assets/demonstracao/desktop/Servicos.png) |
-| **Por que escolher** | ![Por que Desktop](public/assets/demonstracao/desktop/Por-que.png) |
-| **Chamada / Final CTA** | ![Chamada Desktop](public/assets/demonstracao/desktop/final.png) |
-| **FAQ** | ![FAQ Desktop](public/assets/demonstracao/desktop/faq.png) |
-| **Depoimentos** | ![Depoimentos Desktop](public/assets/demonstracao/desktop/depoimentos.png) |
+| **Home / História** | ![Home Desktop](public/demonstracao/desktop/home-historia.png) |
+| **Serviços** | ![Serviços Desktop](public/demonstracao/desktop/Servicos.png) |
+| **Por que escolher** | ![Por que Desktop](public/demonstracao/desktop/Por-que.png) |
+| **Chamada / Final CTA** | ![Chamada Desktop](public/demonstracao/desktop/final.png) |
+| **FAQ** | ![FAQ Desktop](public/demonstracao/desktop/faq.png) |
+| **Depoimentos** | ![Depoimentos Desktop](public/demonstracao/desktop/depoimentos.png) |
 
 ---
 
 ### 📱 Versão Mobile
 | Página | Preview |
 |--------|----------|
-| **Home / História** | <img src="public/assets/demonstracao/mobile/home-historia.jpeg" width="250"/> |
-| **Serviços** | <img src="public/assets/demonstracao/mobile/servicos.jpeg" width="250"/> |
-| **Por que escolher** | <img src="public/assets/demonstracao/mobile/por-que.jpeg" width="250"/> |
-| **Chamada / Final CTA** | <img src="public/assets/demonstracao/mobile/final.jpeg" width="250"/> |
-| **FAQ** | <img src="public/assets/demonstracao/mobile/faq.jpeg" width="250"/> |
-| **Depoimentos** | <img src="public/assets/demonstracao/mobile/depoimentos.jpeg" width="250"/> |
+| **Home / História** | <img src="public/demonstracao/mobile/home-historia.jpeg" width="250"/> |
+| **Serviços** | <img src="public/demonstracao/mobile/servicos.jpeg" width="250"/> |
+| **Por que escolher** | <img src="public/demonstracao/mobile/por-que.jpeg" width="250"/> |
+| **Chamada / Final CTA** | <img src="public/demonstracao/mobile/final.jpeg" width="250"/> |
+| **FAQ** | <img src="public//demonstracao/mobile/faq.jpeg" width="250"/> |
+| **Depoimentos** | <img src="public/demonstracao/mobile/depoimentos.jpeg" width="250"/> |
 
 > 💡 **Nota:** As capturas da versão mobile são verticais (prints diretos do celular), enquanto as do desktop são horizontais, simulando a experiência completa no navegador.
 
