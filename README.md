@@ -177,6 +177,4 @@ npm start
 
 ## 🧾 Créditos e Licença
 
-Criado com 💚 por **Debuguei**  
-Todos os direitos reservados © 2025 — **Sam_Creds**.  
-💼 *Landing cinematográfica de soluções financeiras.*
+Criado com 💚 por [**Debuguei**](https://www.debuguei.com.br/).
